@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>uTodo - Your personal todo list.</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="home">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                </div>
+                <div class="other">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/mailto:technologymad3@gmail.com">Contact</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="box" id="heading">
+        <h1>
+            <%= kindOfDay %>.
+        </h1>
+    </div>
+
+    <main class="box">
+        <% newListItems.forEach(element=> { %>
+            <div class="item">
+                <input type="checkbox">
+                <p class="item">
+                    <%= element %>
+                </p>
+            </div>
+            <% }) %>
+
+                <form class="item" action="/" method="post">
+                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                    <button name="button" type="submit">+</button>
+                </form>
+    </main>
+
+
+</body>
+
+</html>
